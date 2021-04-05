@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 10000px;
+        }
+
+        .cls001, .cls002, .cls003, .cls004 {
+            width: 100%;
+            height: 1000px;
+        }
+
+        .cls001, .cls003 {
+            background: pink;
+        }
+
+        .cls002, .cls004 {
+            background: green;
+        }
+
+        .box1, .box2, .box3 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 20px;
+            opacity: 1;
+        }
+
+        .lee {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                //실행문...........
+                var varScroll = $(window).scrollTop();
+                
+                console.log(varScroll);
+                //실행문 끝.......
+
+                if ( varScroll > 1000 ){
+                    $(".box1").delay(500).animate({"marginTop":"0px"}, 1000);
+                };
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="cls001">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="cls002">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="cls003">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="cls004">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>
